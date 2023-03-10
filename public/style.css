@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Tilt+Warp&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+html{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.mainNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    right: 0;
+    font-family: poppins, sans-serif;
+    background-color: #ebebeb;
+}
+.mainNav a, .sideNav a{
+    text-decoration: none;
+    color: #000;
+}
+.navul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sideNav .navul{
+    flex-direction: column;;
+}
+.navul li{
+    position: relative;
+    font-weight: 500;
+    padding: 17px;
+    padding-bottom: 12px;
+    font-size: 26px;
+    text-align: center;
+    transition: all ease-in-out 0.2s;
+}
+.navul li:hover{
+    cursor: pointer;
+    background-color: #cddfff;
+}
+.sideNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 60px;
+    height: calc(100vh - 60px);
+    left: 0;
+    bottom: 0;
+    background-color: #ebebeb;
+}
+#user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    font-size: 22px;
+    background-color: #1A73E8;
+    border-right: solid 1px #1A73E8;
+    border-bottom: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#user a{
+    color: #fff;
+}
+.username{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.username span{
+    font-size: 16px;
+    padding: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.profileInfo, .logoutInfo{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: -10px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1A73E8;
+    z-index: 999;
+    animation: to-bottom 0.4s;
+}
+.logoutInfo{
+    top: 0px;
+    left: 70px;
+}
+.profileInfo h2, .logoutInfo h2{
+    color: #fff;
+    font-size: 20px;
+}
+.profileInfo span, .logoutInfo span{
+    color: #fff;
+    padding-top: 5px;
+    font-size: 14px;
+}
+.mainBody{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: calc(100% - 60px);
+}
+.mainInput{
+    display: block;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 150px;
+    border: 10px;
+    border-radius: 10px;
+    border: 3px dashed #000;
+    background-image: url(./images/uploadIcon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ebebeb;
+    transition: all ease-in-out 0.2s;
+    z-index: 999;
+}
+.mainInput:hover{
+    background-color: #cddfff;
+}
+.mainInput span{
+    font-family: 'Nunito Sans', sans-serif;
+    position: absolute;
+    top: 110px;
+    left: 95px;
+    font-weight: 600;
+    user-select: none;
+    z-index: 1;
+}
+input[type="file"] {
+    display: none;
+}
+.mainFileUpload{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    pointer-events: all;
+}
+.sideFileUpload{
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 67px;
+    z-index: 999;
+}
+
+/*-----------------------------*/
+
+.mainBody .image{
+    height: 200px;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 0 5px #00000026;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.select{
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0084ff67;
+}
+.mainBody .image img{
+    height: 100%;
+    width: auto;
+}
+.mainBody .image img:hover{
+    opacity: 0.8;
+}
+.display{
+    display: flex;
+}
+.preview{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+}
+@keyframes to-bottom {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

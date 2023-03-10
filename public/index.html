@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <title>Image uploader</title>
+</head>
+<body>
+    <main>
+        <div class="mainNav">
+            <ul class="navul">  
+                <li id="user"><div class="username"><a href=""><ion-icon name="person"></ion-icon></a><span>@user_profile</span></div></li>
+            </ul>
+            <ul class="navul">
+                <li>
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
+                    <form action="fileupload" method="post" enctype="multipart/form-data">
+                        <input id="fileUpload" type="file" accept="image/jpeg, image/png, image/jpg">
+                        <label for="fileUpload" class="sideFileUpload"></label>
+                    </form>
+                </li>
+                <li id="profile"><ion-icon name="information-circle-outline"></ion-icon><div class="profileInfo"><h2>Profile info</h2><span>User information will appear here when you sign in.</span></div></li>
+                <li><a href=""><ion-icon name="person-circle-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="sideNav">
+            <ul class="navul">
+                <li id="selectAll"><ion-icon name="scan-outline"></ion-icon></li>
+                <li>
+                    <ion-icon name="folder-outline"></ion-icon></ion-icon>
+                    <form action="fileupload" method="post" enctype="multipart/form-data">
+                        <input id="fileUpload" type="file" accept="image/jpeg, image/png, image/jpg">
+                        <label for="fileUpload" class="sideFileUpload"></label>
+                    </form>
+                </li>
+                <li id="choose"><ion-icon name="move-outline"></ion-icon></li>
+                <li id="delete"><ion-icon name="trash-outline"></ion-icon></li>
+            </ul>
+            <ul class="navul">
+                <li id="logout"><ion-icon name="information-circle-outline"></ion-icon><div class="logoutInfo"><h2>Logout</h2><span>User will logout if signed in.</span></div></li>
+                <li><a href=""><ion-icon name="log-out-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="mainInput">
+            <form action="fileupload" method="post" enctype="multipart/form-data">
+                <input id="fileUpload" type="file" accept="image/jpeg, image/png, image/jpg">
+                <label for="fileUpload" class="mainFileUpload"></label>
+                <span>Upload image</span>
+            </form>
+        </div>
+        <div class="mainBody">
+            
+        </div>
+        
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./upload.js"></script>
+</body>
+</html>

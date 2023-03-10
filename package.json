@@ -1,0 +1,26 @@
+{
+  "name": "imageuploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickola23/imageUploader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickola23/imageUploader/issues"
+  },
+  "homepage": "https://github.com/nickola23/imageUploader#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "http-status-codes": "^2.2.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
